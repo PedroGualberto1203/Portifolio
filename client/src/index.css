@@ -197,11 +197,11 @@
     100% { transform: rotate(360deg); }
   }
 
-  /* Scroll animations */
+  /* Enhanced scroll animations - more visible and bidirectional */
   .fade-in-up {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
+    transform: translateY(60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .fade-in-up.visible {
@@ -211,8 +211,8 @@
 
   .fade-in-left {
     opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.6s ease-out;
+    transform: translateX(-80px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .fade-in-left.visible {
@@ -222,13 +222,47 @@
 
   .fade-in-right {
     opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.6s ease-out;
+    transform: translateX(80px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .fade-in-right.visible {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  /* Slide animations for more dramatic effect */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.9);
+    transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+    transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  .slide-in-up {
+    opacity: 0;
+    transform: translateY(100px) scale(0.95);
+    transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .slide-in-up.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 
   /* Enhanced hover effects */
@@ -281,12 +315,12 @@
     50% { transform: translateY(-20px); }
   }
 
-  /* Typewriter effect */
+  /* Typewriter effect - 2x faster */
   .typewriter {
     overflow: hidden;
     border-right: 0.15em solid var(--primary-color);
     white-space: nowrap;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation: typing 1.75s steps(40, end), blink-caret 0.75s step-end infinite;
   }
 
   @keyframes typing {

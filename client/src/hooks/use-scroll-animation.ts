@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export function useScrollAnimation() {
+export function useScrollAnimation(threshold = 0.1, rootMargin = '50px') {
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -9,12 +9,15 @@ export function useScrollAnimation() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+          } else {
+            // Remove visible class for bidirectional animation
+            entry.target.classList.remove('visible');
           }
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px',
+        threshold,
+        rootMargin,
       }
     );
 
@@ -27,7 +30,7 @@ export function useScrollAnimation() {
         observer.unobserve(elementRef.current);
       }
     };
-  }, []);
+  }, [threshold, rootMargin]);
 
   return elementRef;
 }
