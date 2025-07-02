@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 interface HomeSectionProps {
   data: {
@@ -15,6 +16,8 @@ export default function HomeSection({ data }: HomeSectionProps) {
   const [projectsCount, setProjectsCount] = useState(0);
   const [certificationsCount, setCertificationsCount] = useState(0);
   const [experienceYears, setExperienceYears] = useState(0);
+  const textRef = useScrollAnimation();
+  const profileRef = useScrollAnimation();
 
   useEffect(() => {
     // Animate counters
@@ -48,8 +51,8 @@ export default function HomeSection({ data }: HomeSectionProps) {
     <section id="home" className="portfolio-section flex items-center" style={{ background: 'linear-gradient(135deg, var(--background-color) 0%, var(--surface-color) 100%)' }}>
       <div className="portfolio-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="hero-text">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <div ref={textRef} className="hero-text fade-in-left">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight typewriter">
               Olá, eu sou{' '}
               <span className="gradient-text">Desenvolvedor</span>
             </h1>
@@ -59,15 +62,15 @@ export default function HomeSection({ data }: HomeSectionProps) {
             
             {/* Stats */}
             <div className="flex gap-8 mb-8">
-              <div className="hero-stat">
+              <div className="hero-stat hover-scale">
                 <span className="stat-number">{projectsCount}</span>
                 <span className="stat-label">Projetos</span>
               </div>
-              <div className="hero-stat">
+              <div className="hero-stat hover-scale">
                 <span className="stat-number">{certificationsCount}</span>
                 <span className="stat-label">Certificações</span>
               </div>
-              <div className="hero-stat">
+              <div className="hero-stat hover-scale">
                 <span className="stat-number">{experienceYears}</span>
                 <span className="stat-label">Anos de Experiência</span>
               </div>
@@ -77,14 +80,14 @@ export default function HomeSection({ data }: HomeSectionProps) {
             <div className="flex gap-4">
               <Button 
                 onClick={() => scrollToSection('projects')}
-                className="btn-gradient text-white px-8 py-3 text-lg"
+                className="btn-gradient text-white px-8 py-3 text-lg hover-scale"
               >
                 Ver Projetos
               </Button>
               <Button 
                 variant="outline"
                 onClick={() => scrollToSection('contact')}
-                className="px-8 py-3 text-lg border-primary-color text-primary-color hover:bg-primary-color hover:text-white"
+                className="px-8 py-3 text-lg border-primary-color text-primary-color hover:bg-primary-color hover:text-white hover-scale"
               >
                 Entre em Contato
               </Button>
@@ -92,9 +95,9 @@ export default function HomeSection({ data }: HomeSectionProps) {
           </div>
           
           {/* Profile Card */}
-          <div className="hero-image flex justify-center lg:justify-end">
-            <div className="glass-card p-8 text-center max-w-sm w-full hover:scale-105 transition-transform duration-300">
-              <div className="w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center text-6xl text-white btn-gradient">
+          <div ref={profileRef} className="hero-image flex justify-center lg:justify-end fade-in-right">
+            <div className="glass-card p-8 text-center max-w-sm w-full hover-lift float">
+              <div className="w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center text-6xl text-white btn-gradient hover-scale">
                 <User size={48} />
               </div>
               <div className="flex items-center justify-center gap-2 text-success-color">

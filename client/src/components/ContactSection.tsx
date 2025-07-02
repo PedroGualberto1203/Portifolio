@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import type { ContactItem } from '@/lib/portfolio-data';
 
 interface ContactSectionProps {
@@ -27,6 +28,9 @@ export default function ContactSection({ contact }: ContactSectionProps) {
     message: ''
   });
   const { toast } = useToast();
+  const titleRef = useScrollAnimation();
+  const infoRef = useScrollAnimation();
+  const formRef = useScrollAnimation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,10 +56,24 @@ export default function ContactSection({ contact }: ContactSectionProps) {
       return;
     }
 
+    // Create WhatsApp message
+    const whatsappMessage = `Olá! Meu nome é ${formData.name}.
+    
+*Assunto:* ${formData.subject}
+*Email:* ${formData.email}
+*Mensagem:* ${formData.message}`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/5562996635404?text=${encodedMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+
     // Success message
     toast({
       title: "Sucesso",
-      description: "Mensagem enviada com sucesso! Entrarei em contato em breve.",
+      description: "Redirecionando para o WhatsApp...",
     });
 
     // Reset form
@@ -77,7 +95,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
   return (
     <section id="contact" className="portfolio-section">
       <div className="portfolio-container">
-        <div className="text-center mb-16">
+        <div ref={titleRef} className="text-center mb-16 fade-in-up">
           <h2 className="text-4xl font-semibold mb-4">Vamos Conversar?</h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
             Entre em contato comigo através dos canais abaixo
@@ -86,14 +104,18 @@ export default function ContactSection({ contact }: ContactSectionProps) {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
-          <div className="glass-card p-8">
+          <div ref={infoRef} className="glass-card p-8 hover-lift fade-in-left">
             <h3 className="text-2xl font-semibold mb-8 text-text-primary">Informações de Contato</h3>
             <div className="space-y-6">
-              {contact.map((item) => {
+              {contact.map((item, index) => {
                 const IconComponent = iconMap[item.icon as keyof typeof iconMap];
                 
                 return (
-                  <div key={item.id} className="contact-item">
+                  <div 
+                    key={item.id} 
+                    className="contact-item hover-glow"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
                     <div className="contact-icon">
                       {IconComponent && <IconComponent size={20} />}
                     </div>
@@ -121,7 +143,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
           </div>
           
           {/* Contact Form */}
-          <div className="glass-card p-8">
+          <div ref={formRef} className="glass-card p-8 hover-lift fade-in-right">
             <h3 className="text-2xl font-semibold mb-8 text-text-primary">Envie uma Mensagem</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -190,7 +212,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
               
               <Button
                 type="submit"
-                className="w-full btn-gradient text-white py-3 text-lg flex items-center justify-center gap-2"
+                className="w-full btn-gradient text-white py-3 text-lg flex items-center justify-center gap-2 hover-scale"
               >
                 <Send size={20} />
                 Enviar Mensagem

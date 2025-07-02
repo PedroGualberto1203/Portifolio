@@ -198,8 +198,8 @@ export const portfolioData = {
       id: 2,
       type: "phone",
       label: "Telefone",
-      value: "+55 (11) 99999-9999",
-      link: "tel:+5511999999999",
+      value: "+55 (62) 99663-5404",
+      link: "tel:+5562996635404",
       icon: "Phone"
     },
     {
@@ -230,8 +230,8 @@ export const portfolioData = {
       id: 6,
       type: "whatsapp",
       label: "WhatsApp",
-      value: "+55 (11) 99999-9999",
-      link: "https://wa.me/5511999999999",
+      value: "+55 (62) 99663-5404",
+      link: "https://wa.me/5562996635404",
       icon: "MessageCircle"
     }
   ] as ContactItem[]
