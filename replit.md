@@ -2,50 +2,50 @@
 
 ## Overview
 
-This is a modern portfolio application built with React, TypeScript, and Express.js. The application features a sophisticated frontend showcasing projects, certifications, experience, and contact information, with a backend API structure ready for development. The app uses a monorepo structure with shared schemas and includes modern UI components from shadcn/ui.
+This is a modern portfolio website built with pure HTML, CSS, and JavaScript. The application features a sophisticated frontend showcasing projects, certifications, experience, and contact information. The site uses only vanilla web technologies without any frameworks or TypeScript.
 
 ## System Architecture
 
 ### Frontend Architecture
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite for fast development and optimized builds
-- **Styling**: Tailwind CSS with custom CSS variables for theming
-- **UI Components**: shadcn/ui component library based on Radix UI primitives
-- **State Management**: React hooks and TanStack Query for server state
-- **Form Handling**: React Hook Form with Zod validation
+- **Languages**: Pure HTML5, CSS3, and vanilla JavaScript (ES6+)
+- **Styling**: Custom CSS with CSS Grid, Flexbox, and CSS variables for theming
+- **Animations**: CSS animations and transitions with Intersection Observer API
+- **Responsiveness**: Mobile-first responsive design with CSS media queries
+- **No Frameworks**: Built without React, Vue, Angular, or any other frameworks
 
 ### Backend Architecture
-- **Runtime**: Node.js with Express.js framework
-- **Language**: TypeScript with ES modules
-- **Database**: PostgreSQL with Drizzle ORM
-- **Session Storage**: PostgreSQL-based sessions using connect-pg-simple
-- **Development**: Hot reload with Vite integration
+- **Runtime**: Node.js with Express.js for static file serving
+- **Language**: Pure JavaScript (ES5+ compatible)
+- **Purpose**: Simple static file server to serve HTML, CSS, and JS files
+- **Development**: Direct file serving without build processes
 
-### Database Strategy
-- **ORM**: Drizzle ORM for type-safe database operations
-- **Database**: PostgreSQL (configured for Neon serverless)
-- **Migrations**: Drizzle Kit for schema migrations
-- **Schema**: Shared TypeScript schemas with Zod validation
+### Data Strategy
+- **Storage**: Static JavaScript objects in data.js file
+- **Structure**: Portfolio data stored as JavaScript constants
+- **No Database**: All data is statically defined in the code
 
 ## Key Components
 
-### Frontend Components
-1. **Portfolio Section**: Main portfolio showcase with navigation
-2. **Projects Section**: Filterable project gallery with categories
-3. **Certifications Section**: Grid display of professional certifications
-4. **Experience Section**: Timeline-based experience display
-5. **Contact Section**: Contact form with validation and contact information
-6. **Navigation**: Responsive navigation with smooth scrolling
+### HTML Structure
+1. **Navigation Bar**: Fixed navigation with smooth scrolling and active link highlighting
+2. **Home Section**: Hero section with animated typewriter text and floating profile card
+3. **Projects Section**: Filterable project gallery with modals for detailed views
+4. **Certifications Section**: Grid display of professional certifications
+5. **Experience Section**: Timeline-based experience display with animations
+6. **Contact Section**: Contact form that redirects to WhatsApp
 
-### Backend Infrastructure
-1. **Storage Interface**: Abstracted storage layer with in-memory implementation
-2. **Route Registration**: Centralized API route management
-3. **Error Handling**: Global error handling middleware
-4. **Development Tools**: Request logging and Vite integration
+### JavaScript Features
+1. **Scroll Animations**: Bidirectional slide-in animations with Intersection Observer
+2. **Project Modal**: Media viewer with image/video support and thumbnail navigation
+3. **Contact Form**: WhatsApp integration with phone number 62996635404
+4. **Animated Counters**: Number animations on page load
+5. **Filter System**: Project category filtering with smooth transitions
 
-### Shared Resources
-1. **Schema Definitions**: Type-safe database schemas with Zod validation
-2. **Type Exports**: Shared TypeScript types between frontend and backend
+### CSS Features
+1. **Responsive Design**: Mobile-first approach with media queries
+2. **Dark Theme**: Modern dark theme with gradient accents
+3. **Animations**: Smooth hover effects and page transitions
+4. **Custom Properties**: CSS variables for consistent theming
 
 ## Data Flow
 
@@ -77,25 +77,29 @@ This is a modern portfolio application built with React, TypeScript, and Express
 ## Deployment Strategy
 
 ### Development
-- **Command**: `npm run dev` - Starts development server with hot reload
-- **Port**: Vite dev server with Express API backend
-- **Database**: Uses DATABASE_URL environment variable
+- **Command**: `node server.js` - Starts simple Express static file server
+- **Port**: 5000 - Serves HTML, CSS, and JavaScript files
+- **No Build Process**: Direct file serving without compilation
 
-### Production Build
-- **Frontend**: `vite build` - Optimized React build to `dist/public`
-- **Backend**: `esbuild` - Bundled Express server to `dist/index.js`
-- **Start**: `npm start` - Runs production server
-
-### Database Management
-- **Schema Push**: `npm run db:push` - Applies schema changes to database
-- **Migrations**: Generated in `./migrations` directory
-- **Connection**: Requires `DATABASE_URL` environment variable
+### File Structure
+- **index.html**: Main HTML file with semantic structure
+- **styles.css**: Complete CSS with animations and responsive design
+- **script.js**: JavaScript functionality and DOM manipulation
+- **data.js**: Static portfolio data and SVG icons
+- **server.js**: Simple Express server for static file serving
 
 ## Changelog
 
 ```
 Changelog:
-- July 02, 2025. Initial setup
+- July 02, 2025. Initial setup with React/TypeScript
+- July 02, 2025. Complete conversion to pure HTML, CSS, and JavaScript
+  - Removed all TypeScript, React, and framework dependencies
+  - Created vanilla JavaScript portfolio with animations
+  - Implemented WhatsApp contact form integration (62996635404)
+  - Added bidirectional scroll animations and project modals
+  - Enhanced typewriter animation speed (2x faster)
+  - Created native Node.js HTTP server for static files
 ```
 
 ## User Preferences
