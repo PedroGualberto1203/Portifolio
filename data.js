@@ -3,113 +3,80 @@ const portfolioData = {
     projects: [
         {
             id: 1,
-            title: "E-commerce Platform",
-            description: "Plataforma completa de e-commerce com sistema de pagamento integrado",
-            fullDescription: "Uma plataforma de e-commerce completa desenvolvida com React e Node.js, featuring carrinho de compras, sistema de pagamento integrado, painel administrativo para gerenciamento de produtos, sistema de usuários com autenticação JWT, e dashboard com analytics em tempo real.",
-            category: "web",
-            tags: ["React", "Node.js", "MongoDB"],
-            technologies: ["React 18", "Node.js", "Express", "MongoDB", "JWT", "Stripe API", "Socket.io", "Material-UI"],
-            icon: "globe",
-            demoLink: "#",
-            githubLink: "#",
+            title: "Gestão de Cliente e Produto",
+            description: "Programa console aplication desenvolvido para gestão de clientes e produtos(CRUD) utilizando Dapper para realizar o acesso ao banco de dados SqlServer.",
+            fullDescription: "Projeto desenvolvido para treinar minhas habilidades em acesso a dados com o banco SqlServer utilizando Dapper. Sistema esse que é capaz de fazer um CRUD completo da parte de gestão de Produtos e Clientes. SISTEMA RODANDO LOCALMENTE!!",
+            category: "desktop",
+            tags: ["C#", ".NET", "Dapper", "SQLServer"],
+            technologies: ["C#", ".NET", "DAPPER", "SQLServer", "DOCKER", "AZURE DATA STUDIO", "TERMINAL"],
+            icon: "database",
+            demoLink: "",
+            githubLink: "https://github.com/PedroGualberto1203/Gestao_Produtos-Clientes",
             images: [
-                "https://via.placeholder.com/800x600?text=E-commerce+Dashboard",
-                "https://via.placeholder.com/800x600?text=Product+Catalog",
-                "https://via.placeholder.com/800x600?text=Shopping+Cart"
+                "./images/gestao1.png",
+                "./images/gestao2.png",
+                "./images/gestao3.png"
             ],
             videos: [
-                "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+                "./images/gestaovideo.mp4"
             ]
         },
         {
             id: 2,
-            title: "Task Manager App",
-            description: "Aplicativo mobile para gerenciamento de tarefas com sincronização em nuvem",
-            fullDescription: "Aplicativo móvel de gerenciamento de tarefas desenvolvido em React Native com Firebase. Features incluem criação e organização de tarefas, sistema de categorias e tags, notificações push, sincronização em tempo real entre dispositivos.",
-            category: "mobile",
-            tags: ["React Native", "Firebase", "Redux"],
-            technologies: ["React Native", "Firebase", "Redux Toolkit", "Expo", "AsyncStorage", "Push Notifications"],
-            icon: "smartphone",
-            demoLink: "#",
-            githubLink: "#",
+            title: "Cardápio",
+            description: "uma solução web para otimização de pedidos na cantina da empresa. O sistema conta com um cardápio online integrado à API do WhatsApp, permitindo pedidos automatizados e melhorando a agilidade no atendimento",
+            fullDescription: "Desenvolvi o projeto Cloud Café para otimizar pedidos na cantina da empresa Open Data Center, utilizando HTML, CSS (Tailwind), JavaScript, Node.js e SQL. O cardápio online permite que funcionários adicionem itens ao carrinho e enviem o pedido automaticamente via API do WhatsApp, agilizando a comunicação e a entrega.",
+            category: "web",
+            tags: ["JavaScript", "Node.js", "SQL", "HTML", "CSS", "TailWind"],
+            technologies: ["JavaScript", "Node.js", "SQL", "HTML", "CSS", "TailWind", "API Whatsapp"],
+            icon: "monitor",
+            demoLink: "https://pedrogualberto1203.github.io/Cardapio_Online/",
+            githubLink: "https://github.com/PedroGualberto1203/Cardapio_Online",
             images: [
-                "https://via.placeholder.com/800x600?text=Task+List",
-                "https://via.placeholder.com/800x600?text=Add+Task",
-                "https://via.placeholder.com/800x600?text=Task+Statistics"
+                "./images/cardapio1.png",
+                "./images/cardapio2.png",
+                "./images/cardapio3.png"
             ],
-            videos: []
+            videos: [
+                "./images/cardapiovideo.mp4"
+            ]
         },
         {
             id: 3,
-            title: "Analytics Dashboard",
-            description: "Dashboard interativo para análise de dados com gráficos em tempo real",
-            fullDescription: "Dashboard de analytics desenvolvido com Vue.js para visualização de dados em tempo real. Features incluem múltiplos tipos de gráficos interativos, filtros avançados, exportação de relatórios, sistema de alertas automáticos.",
+            title: "Chat Online",
+            description: "Este é um projeto de chat em tempo real, para conversar com seus amigos de forma rápida e fácil",
+            fullDescription: "Este é um projeto de chat em tempo real. Ao acessar o site, você encontrará uma tela de login, onde o nome inserido será exibido para os demais usuários na conversa. Para facilitar a identificação, cada participante recebe uma cor diferente, tornando mais clara a distinção entre os interlocutores. O chat foi desenvolvido utilizando HTML, CSS e JavaScript no frontend, enquanto o backend foi construído com Node.js. PARA TESTAR, ESPERE UNS 30S PARA FAZER LOGIN POIS A HOSPEDAGEM DO GITHUB É LENTA :)",
             category: "web",
-            tags: ["Vue.js", "Python", "PostgreSQL"],
-            technologies: ["Vue 3", "D3.js", "Python", "PostgreSQL", "Chart.js", "Vuetify", "WebSockets"],
-            icon: "bar-chart",
-            demoLink: "#",
-            githubLink: "#",
+            tags: ["JavaScript", "Node.js", "HTML", "CSS"],
+            technologies: ["JavaScript", "Node.js", "HTML", "CSS"],
+            icon: "user",
+            demoLink: "https://pedrogualberto1203.github.io/Chat_online/",
+            githubLink: "https://github.com/PedroGualberto1203/Chat_online?tab=readme-ov-file",
             images: [
-                "https://via.placeholder.com/800x600?text=Analytics+Dashboard",
-                "https://via.placeholder.com/800x600?text=Charts+View",
-                "https://via.placeholder.com/800x600?text=Reports"
+                "./images/chat1.png",
+                "./images/chat2.png",
             ],
-            videos: []
+            videos: [
+                "./images/chatvideo.mp4"
+            ]
         },
         {
             id: 4,
-            title: "Desktop Notes App",
-            description: "Aplicativo desktop para anotações com suporte a markdown",
-            fullDescription: "Aplicativo desktop desenvolvido com Electron para anotações com suporte completo a markdown. Features incluem editor WYSIWYG, organização por pastas, busca avançada, sincronização na nuvem.",
-            category: "desktop",
-            tags: ["Electron", "React", "SQLite"],
-            technologies: ["Electron", "React", "SQLite", "CodeMirror", "Markdown-it", "Node.js"],
-            icon: "monitor",
-            demoLink: "#",
-            githubLink: "#",
-            images: [
-                "https://via.placeholder.com/800x600?text=Notes+Editor",
-                "https://via.placeholder.com/800x600?text=Folder+Organization"
-            ],
-            videos: []
-        },
-        {
-            id: 5,
-            title: "Weather Mobile App",
-            description: "Aplicativo de clima com previsões e mapas interativos",
-            fullDescription: "Aplicativo móvel de previsão do tempo desenvolvido em Flutter com integração de APIs meteorológicas. Features incluem previsão detalhada de 7 dias, geolocalização automática, busca por cidades, mapas meteorológicos interativos.",
-            category: "mobile",
-            tags: ["Flutter", "Dart", "API"],
-            technologies: ["Flutter", "Dart", "OpenWeather API", "Google Maps", "SQLite", "Provider"],
-            icon: "cloud",
-            demoLink: "#",
-            githubLink: "#",
-            images: [
-                "https://via.placeholder.com/800x600?text=Weather+Main",
-                "https://via.placeholder.com/800x600?text=7-Day+Forecast",
-                "https://via.placeholder.com/800x600?text=Weather+Map"
-            ],
-            videos: []
-        },
-        {
-            id: 6,
-            title: "Portfolio Website",
-            description: "Site portfólio responsivo com animações e design moderno",
-            fullDescription: "Website portfolio pessoal desenvolvido com React e TypeScript, featuring animações suaves, design responsivo, sistema de temas, formulário de contato funcional, seções para projetos, experiência e certificações.",
+            title: "Mario Game",
+            description: "Este é um jogo inspirado no Mario, onde o objetivo é apertar a tecla ESPAÇO para fazer o personagem pular os canos e evitar a derrota.",
+            fullDescription: "Este é um jogo inspirado no Mario, onde o objetivo é apertar a tecla ESPAÇO para fazer o personagem pular os canos e evitar a derrota. O projeto foi desenvolvido utilizando HTML, CSS e JavaScript. A interação entre JavaScript e CSS é fundamental para a execução das animações do jogo, incluindo a movimentação do Mario, dos canos, das nuvens e muito mais.",
             category: "web",
-            tags: ["React", "TypeScript", "Tailwind"],
-            technologies: ["React 18", "TypeScript", "Tailwind CSS", "Framer Motion", "React Hook Form", "Zod"],
-            icon: "user",
-            demoLink: "#",
-            githubLink: "#",
+            tags: ["JavaScript", "HTML", "CSS"],
+            technologies: ["JavaScript", "HTML", "CSS"],
+            icon: "globe",
+            demoLink: "https://pedrogualberto1203.github.io/MarioGame/",
+            githubLink: "https://github.com/PedroGualberto1203/MarioGame?tab=readme-ov-file",
             images: [
-                "https://via.placeholder.com/800x600?text=Portfolio+Home",
-                "https://via.placeholder.com/800x600?text=Projects+Section",
-                "https://via.placeholder.com/800x600?text=Contact+Form"
+                "./images/mario1.png",
+                "./images/mario2.png",
             ],
             videos: [
-                "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+                "./images/mariovideo.mp4"
             ]
         }
     ],
@@ -117,58 +84,37 @@ const portfolioData = {
     certifications: [
         {
             id: 1,
-            title: "AWS Certified Developer",
-            issuer: "Amazon Web Services",
-            date: "Dezembro 2024",
-            icon: "cloud"
+            title: "Fundamentos do C#",
+            issuer: "Balta.io",
+            date: "2025",
+            icon: "code"
         },
         {
             id: 2,
-            title: "React Developer Certification",
-            issuer: "Meta",
-            date: "Novembro 2024",
+            title: "Fundamentos da Orientação a Objetos",
+            issuer: "Balta.io",
+            date: "2025",
             icon: "code"
         },
         {
             id: 3,
-            title: "Node.js Application Development",
-            issuer: "Linux Foundation",
-            date: "Outubro 2024",
-            icon: "server"
-        },
-        {
-            id: 4,
-            title: "JavaScript Advanced Concepts",
-            issuer: "FreeCodeCamp",
-            date: "Setembro 2024",
-            icon: "file-code"
-        },
-        {
-            id: 5,
-            title: "Docker & Kubernetes",
-            issuer: "Docker Inc",
-            date: "Agosto 2024",
-            icon: "package"
-        },
-        {
-            id: 6,
-            title: "Git & GitHub Mastery",
-            issuer: "GitHub",
-            date: "Julho 2024",
-            icon: "git-branch"
-        },
-        {
-            id: 7,
-            title: "Database Design",
-            issuer: "Oracle",
-            date: "Junho 2024",
+            title: "SQL Server",
+            issuer: "Balta.io",
+            date: "2025",
             icon: "database"
         },
         {
-            id: 8,
-            title: "UI/UX Design Principles",
-            issuer: "Adobe",
-            date: "Maio 2024",
+            id: 4,
+            title: "HTML5 e CSS3",
+            issuer: "Curso em Vídeo",
+            date: "2023",
+            icon: "palette"
+        },
+        {
+            id: 5,
+            title: "JavaScript",
+            issuer: "Curso em Vídeo",
+            date: "2024",
             icon: "palette"
         }
     ],
@@ -176,27 +122,19 @@ const portfolioData = {
     experience: [
         {
             id: 1,
-            title: "Desenvolvedor Full Stack Senior",
-            company: "TechCorp Solutions",
-            period: "Janeiro 2023 - Presente",
-            description: "Desenvolvimento de aplicações web modernas usando React, Node.js e PostgreSQL. Liderança de equipe de 5 desenvolvedores e mentoria de desenvolvedores júnior.",
-            icon: "code"
+            title: "Estagiário em Suporte Técnico",
+            company: "Open Data Center",
+            period: "Setembro 2024 - Fevereiro 2025",
+            description: "Desenvolvi o projeto Cloud Café para otimizar pedidos na cantina da empresa, utilizando HTML, CSS (Tailwind), JavaScript, Node.js e SQL. O cardápio online permite que funcionários adicionem itens ao carrinho e enviem o pedido automaticamente via API do WhatsApp, agilizando a comunicação e a entrega. Além disso, realizei manutenção de hardware, otimização de sistemas Windows e suporte à infraestrutura de redes, incluindo criação de máquinas virtuais e configuração de firewalls.",
+            icon: "cloud"
         },
         {
             id: 2,
-            title: "Desenvolvedor Frontend",
-            company: "StartupXYZ",
-            period: "Março 2021 - Dezembro 2022",
-            description: "Criação de interfaces responsivas e interativas usando React e TypeScript. Implementação de testes automatizados e otimização de performance.",
-            icon: "laptop"
-        },
-        {
-            id: 3,
-            title: "Desenvolvedor Junior",
-            company: "WebDev Agency",
-            period: "Janeiro 2020 - Fevereiro 2021",
-            description: "Desenvolvimento de sites e aplicações web usando HTML, CSS, JavaScript e PHP. Colaboração em projetos de e-commerce e sistemas de gestão.",
-            icon: "graduation-cap"
+            title: "Desenvolvedor FullStack",
+            company: "Perfil Acessórios",
+            period: "Em Desenvolvendo",
+            description: "Estou estudando e desenvolvendo um sistema web para a empresa Perfil Acessórios(empresa de família), com foco no gerenciamento de produtos e clientes, incluindo funcionalidades completas de CRUD. A plataforma também conta com uma página voltada à divulgação da marca, com recursos para vendas online e interação com os clientes. O projeto utiliza tecnologias modernas para integrar gestão interna e presença digital, contribuindo para a automação e expansão da empresa.",
+            icon: "code"
         }
     ],
 
@@ -205,7 +143,7 @@ const portfolioData = {
             id: 1,
             type: "email",
             label: "Email",
-            value: "pedro@exemplo.com",
+            value: "pedro.gualberto1203@gmail.com",
             link: "mailto:pedro@exemplo.com",
             icon: "mail"
         },
@@ -221,23 +159,23 @@ const portfolioData = {
             id: 3,
             type: "linkedin",
             label: "LinkedIn",
-            value: "/in/pedro-dev",
-            link: "https://linkedin.com/in/pedro-dev",
+            value: "PedroGualberto",
+            link: "https://www.linkedin.com/in/pedro-gualberto-9a2b62316/",
             icon: "linkedin"
         },
         {
             id: 4,
             type: "github",
             label: "GitHub",
-            value: "/pedro-dev",
-            link: "https://github.com/pedro-dev",
+            value: "PedroGualberto1203",
+            link: "https://github.com/PedroGualberto1203",
             icon: "github"
         },
         {
             id: 5,
             type: "location",
             label: "Localização",
-            value: "São Paulo, SP - Brasil",
+            value: "Goiânia, GO - Brasil",
             link: null,
             icon: "map-pin"
         },

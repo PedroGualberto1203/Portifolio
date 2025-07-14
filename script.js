@@ -123,7 +123,7 @@ function initializeCounters() {
             if (entry.isIntersecting) {
                 animateCounter(projectsCount, portfolioData.projects.length, 2000);
                 animateCounter(certificationsCount, portfolioData.certifications.length, 2500);
-                animateCounter(experienceYears, 4, 3000);
+                animateCounter(experienceYears, 2, 3000);
                 counterObserver.unobserve(entry.target);
             }
         });
