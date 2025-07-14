@@ -907,6 +907,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* =================================
+   RESPONSIVE DESIGN - MOBILE FIXES
+   ================================= */
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
@@ -930,23 +934,92 @@ body {
         left: 0;
     }
 
+    /* Container principal */
+    .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* Seção hero - força layout de coluna única */
     .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
     }
-
+    
+    /* Título principal */
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1rem !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
     }
-
+    
+    /* Descrição do hero */
+    .hero-description {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 2rem !important;
+        padding: 0 0.5rem !important;
+    }
+    
+    /* Estatísticas - layout vertical em telas muito pequenas */
     .hero-stats {
-        justify-content: center;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 2rem !important;
     }
-
+    
+    /* Botões do hero */
     .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 250px !important;
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Profile card */
+    .profile-card {
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        padding: 1.5rem !important;
+    }
+    
+    .profile-avatar {
+        width: 6rem !important;
+        height: 6rem !important;
+        margin: 0 auto 1rem !important;
+    }
+    
+    .profile-avatar img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+    }
+    
+    /* Navegação móvel ajustada */
+    .nav-container {
+        padding: 1rem !important;
+    }
+    
+    .nav-logo {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Seção home - altura ajustada */
+    .home-section {
+        min-height: 100vh !important;
+        padding: 5rem 0 3rem 0 !important;
     }
 
     .contact-grid {
@@ -985,5 +1058,84 @@ body {
 
     .certifications-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Para telas muito pequenas (menos de 480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+    
+    .hero-stats {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem !important;
+    }
+    
+    .hero-buttons .btn {
+        font-size: 0.8rem !important;
+        padding: 0.6rem 1.2rem !important;
+    }
+    
+    .profile-card {
+        max-width: 250px !important;
+        padding: 1rem !important;
+    }
+    
+    .profile-avatar {
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+}
+
+/* Para orientação landscape em mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .home-section {
+        padding: 4rem 0 2rem 0 !important;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-stats {
+        flex-direction: row !important;
+        gap: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .profile-card {
+        max-width: 200px !important;
+        padding: 1rem !important;
+    }
+    
+    .profile-avatar {
+        width: 4rem !important;
+        height: 4rem !important;
+        margin: 0 auto 0.5rem !important;
     }
 }
