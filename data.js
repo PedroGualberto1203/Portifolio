@@ -13,12 +13,12 @@ const portfolioData = {
             demoLink: "",
             githubLink: "https://github.com/PedroGualberto1203/Gestao_Produtos-Clientes",
             images: [
-                "./images/GestaoClienteProduto/gestao1.png",
-                "./images/GestaoClienteProduto/gestao2.png",
-                "./images/GestaoClienteProduto/gestao3.png"
+                "./images/gestaoclienteproduto/gestao1.png",
+                "./images/gestaoclienteproduto/gestao2.png",
+                "./images/gestaoclienteproduto/gestao3.png"
             ],
             videos: [
-                "./images/GestaoClienteProduto/gestaovideo.mp4"
+                "./images/gestaoclienteproduto/gestaovideo.mp4"
             ]
         },
         {
@@ -33,12 +33,12 @@ const portfolioData = {
             demoLink: "",
             githubLink: "https://github.com/PedroGualberto1203/Gestao_Produtos-Clientes",
             images: [
-                "./images/Financas/tela1.png",
-                "./images/Financas/tela2.png",
-                "./images/Financas/tela3.png"
+                "./images/financas/tela1.png",
+                "./images/financas/tela2.png",
+                "./images/financas/tela3.png"
             ],
             videos: [
-                "./images/Financas/VideoFinanceiro.mp4"
+                "./images/financas/VideoFinanceiro.mp4"
             ]
         },
         {
@@ -53,12 +53,12 @@ const portfolioData = {
             demoLink: "https://pedrogualberto1203.github.io/Cardapio_Online/",
             githubLink: "https://github.com/PedroGualberto1203/Cardapio_Online",
             images: [
-                "./images/Cardapio/cardapio1.png",
-                "./images/Cardapio/cardapio2.png",
-                "./images/Cardapio/cardapio3.png"
+                "./images/cardapio/cardapio1.png",
+                "./images/cardapio/cardapio2.png",
+                "./images/cardapio/cardapio3.png"
             ],
             videos: [
-                "./images/Cardapio/cardapiovideo.mp4"
+                "./images/cardapio/cardapiovideo.mp4"
             ]
         },
         {
@@ -73,11 +73,11 @@ const portfolioData = {
             demoLink: "https://pedrogualberto1203.github.io/Chat_online/",
             githubLink: "https://github.com/PedroGualberto1203/Chat_online?tab=readme-ov-file",
             images: [
-                "./images/Chat/chat1.png",
-                "./images/Chat/chat2.png",
+                "./images/chat/chat1.png",
+                "./images/chat/chat2.png",
             ],
             videos: [
-                "./images/Chat/chatvideo.mp4"
+                "./images/chat/chatvideo.mp4"
             ]
         },
         {
@@ -92,11 +92,11 @@ const portfolioData = {
             demoLink: "https://pedrogualberto1203.github.io/MarioGame/",
             githubLink: "https://github.com/PedroGualberto1203/MarioGame?tab=readme-ov-file",
             images: [
-                "./images/Mario/mario1.png",
-                "./images/Mario/mario2.png",
+                "./images/mario/mario1.png",
+                "./images/mario/mario2.png",
             ],
             videos: [
-                "./images/Mario/mariovideo.mp4"
+                "./images/mario/mariovideo.mp4"
             ]
         }
     ],
