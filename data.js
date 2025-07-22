@@ -13,16 +13,36 @@ const portfolioData = {
             demoLink: "",
             githubLink: "https://github.com/PedroGualberto1203/Gestao_Produtos-Clientes",
             images: [
-                "./images/gestao1.png",
-                "./images/gestao2.png",
-                "./images/gestao3.png"
+                "./images/GestaoClienteProduto/gestao1.png",
+                "./images/GestaoClienteProduto/gestao2.png",
+                "./images/GestaoClienteProduto/gestao3.png"
             ],
             videos: [
-                "./images/gestaovideo.mp4"
+                "./images/GestaoClienteProduto/gestaovideo.mp4"
             ]
         },
         {
             id: 2,
+            title: "Sistema de Finanças",
+            description: "Programa console aplication desenvolvido para controle de finanças pessoal, utilizando Entity Framework para realizar o acesso ao banco de dados SqlServer.",
+            fullDescription: "Projeto desenvolvido utilizando C#, .NET, Entity Framework, Docker e SqlServer, feito para treinar minhas habilidades em acesso a dados com o banco SqlServer utilizando EF. Sistema esse que é capaz de fazer CRUDs completos para uma melhor gestão. Sistema contém inúmeros tipos de relacionamentos envolvendo o banco de dados, feito pelo EF, tanto relacionamento UM para MUITOS, quanto MUITO para MUITOS. SISTEMA RODANDO LOCALMENTE !!",
+            category: "desktop",
+            tags: ["C#", ".NET", "EntityFramework", "SQLServer"],
+            technologies: ["C#", ".NET", "EntityFramework", "SQLServer", "DOCKER", "AZURE DATA STUDIO", "TERMINAL"],
+            icon: "database",
+            demoLink: "",
+            githubLink: "https://github.com/PedroGualberto1203/Gestao_Produtos-Clientes",
+            images: [
+                "./images/Financas/tela1.png",
+                "./images/Financas/tela2.png",
+                "./images/Financas/tela3.png"
+            ],
+            videos: [
+                "./images/Financas/VideoFinanceiro.mp4"
+            ]
+        },
+        {
+            id: 3,
             title: "Cardápio",
             description: "uma solução web para otimização de pedidos na cantina da empresa. O sistema conta com um cardápio online integrado à API do WhatsApp, permitindo pedidos automatizados e melhorando a agilidade no atendimento",
             fullDescription: "Desenvolvi o projeto Cloud Café para otimizar pedidos na cantina da empresa Open Data Center, utilizando HTML, CSS (Tailwind), JavaScript, Node.js e SQL. O cardápio online permite que funcionários adicionem itens ao carrinho e enviem o pedido automaticamente via API do WhatsApp, agilizando a comunicação e a entrega.",
@@ -33,16 +53,16 @@ const portfolioData = {
             demoLink: "https://pedrogualberto1203.github.io/Cardapio_Online/",
             githubLink: "https://github.com/PedroGualberto1203/Cardapio_Online",
             images: [
-                "./images/cardapio1.png",
-                "./images/cardapio2.png",
-                "./images/cardapio3.png"
+                "./images/Cardapio/cardapio1.png",
+                "./images/Cardapio/cardapio2.png",
+                "./images/Cardapio/cardapio3.png"
             ],
             videos: [
-                "./images/cardapiovideo.mp4"
+                "./images/Cardapio/cardapiovideo.mp4"
             ]
         },
         {
-            id: 3,
+            id: 4,
             title: "Chat Online",
             description: "Este é um projeto de chat em tempo real, para conversar com seus amigos de forma rápida e fácil",
             fullDescription: "Este é um projeto de chat em tempo real. Ao acessar o site, você encontrará uma tela de login, onde o nome inserido será exibido para os demais usuários na conversa. Para facilitar a identificação, cada participante recebe uma cor diferente, tornando mais clara a distinção entre os interlocutores. O chat foi desenvolvido utilizando HTML, CSS e JavaScript no frontend, enquanto o backend foi construído com Node.js. PARA TESTAR, ESPERE UNS 30S PARA FAZER LOGIN POIS A HOSPEDAGEM DO GITHUB É LENTA :)",
@@ -53,15 +73,15 @@ const portfolioData = {
             demoLink: "https://pedrogualberto1203.github.io/Chat_online/",
             githubLink: "https://github.com/PedroGualberto1203/Chat_online?tab=readme-ov-file",
             images: [
-                "./images/chat1.png",
-                "./images/chat2.png",
+                "./images/Chat/chat1.png",
+                "./images/Chat/chat2.png",
             ],
             videos: [
-                "./images/chatvideo.mp4"
+                "./images/Chat/chatvideo.mp4"
             ]
         },
         {
-            id: 4,
+            id: 5,
             title: "Mario Game",
             description: "Este é um jogo inspirado no Mario, onde o objetivo é apertar a tecla ESPAÇO para fazer o personagem pular os canos e evitar a derrota.",
             fullDescription: "Este é um jogo inspirado no Mario, onde o objetivo é apertar a tecla ESPAÇO para fazer o personagem pular os canos e evitar a derrota. O projeto foi desenvolvido utilizando HTML, CSS e JavaScript. A interação entre JavaScript e CSS é fundamental para a execução das animações do jogo, incluindo a movimentação do Mario, dos canos, das nuvens e muito mais.",
@@ -72,11 +92,11 @@ const portfolioData = {
             demoLink: "https://pedrogualberto1203.github.io/MarioGame/",
             githubLink: "https://github.com/PedroGualberto1203/MarioGame?tab=readme-ov-file",
             images: [
-                "./images/mario1.png",
-                "./images/mario2.png",
+                "./images/Mario/mario1.png",
+                "./images/Mario/mario2.png",
             ],
             videos: [
-                "./images/mariovideo.mp4"
+                "./images/Mario/mariovideo.mp4"
             ]
         }
     ],
