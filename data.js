@@ -111,7 +111,7 @@ const portfolioData = {
         },
         {
             id: 2,
-            title: "Fundamentos da Orientação a Objetos",
+            title: "Programação Orientada a Objetos",
             issuer: "Balta.io",
             date: "2025",
             icon: "code"
@@ -136,7 +136,28 @@ const portfolioData = {
             issuer: "Curso em Vídeo",
             date: "2024",
             icon: "palette"
-        }
+        },
+        {
+            id: 6,
+            title: "SQL Server",
+            issuer: "Balta.io",
+            date: "2025",
+            icon: "code"
+        },
+        {
+            id: 7,
+            title: "Acesso a dados com .NET, C#, Dapper e SQL Server",
+            issuer: "Balta.io",
+            date: "2025",
+            icon: "code"
+        },
+        {
+            id: 8,
+            title: "Entity Framework",
+            issuer: "Balta.io",
+            date: "2025",
+            icon: "code"
+        },
     ],
 
     experience: [
